@@ -1,6 +1,4 @@
 ﻿using Amazon.S3;
-using Amazon.S3.Model;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace S3.FileUpload.API.Controllers
@@ -58,6 +56,7 @@ namespace S3.FileUpload.API.Controllers
             }
 
             await _s3Client.DeleteBucketAsync(bucketName);
+
             return NoContent();
         }
     }
